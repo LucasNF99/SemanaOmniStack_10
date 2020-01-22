@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './styles.css'
+import './style.css'
 
 function DevItem({ dev }) {
 
@@ -18,3 +18,5 @@ function DevItem({ dev }) {
     </li>
   );
 }
+
+export default DevItem;
