@@ -6,8 +6,9 @@ import './App.css';
 import './Sidebar.css';
 import './Main.css';
 
+import DevForm from './components/DevForm/Index';
 import DevItem from './components/DevItem';
-import DevForm from './components/DevForm';
+
 
 
 function App() {
