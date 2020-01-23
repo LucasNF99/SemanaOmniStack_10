@@ -11,7 +11,6 @@ function DevForm({ onSubmit }) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
         const { latitude, longitude } = position.coords;
-
         setLatitude(latitude);
         setLongitude(longitude);
       },

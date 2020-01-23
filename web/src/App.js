@@ -31,10 +31,10 @@ function App() {
 
   return (
     <div id="app">
-      <asaide>
+      <aside>
         <strong>Cadastrar</strong>
         <DevForm onSubmit={handleAddDev}/>
-      </asaide>
+      </aside>
 
       <main>
         <ul>
