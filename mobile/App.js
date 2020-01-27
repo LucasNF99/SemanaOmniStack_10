@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Hello world!</Text>
+      <Text style={styles.title}>Hello world!</Text>
     </View>
   );
 }
@@ -12,8 +12,14 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    fontWeight: 'bold',
+    backgroundColor: '#ff7020',
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title: {
+    fontWeight: 'bold',
+    fontSize: 32,
+    color: '#fff',
+  }
 });
