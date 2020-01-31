@@ -5,6 +5,7 @@ import { requestPermissionsAsync, getCurrentPositionAsync } from 'expo-location'
 import { MaterialIcons } from '@expo/vector-icons';
 
 import api from '../services/api';
+import { connetc, disconect } from '../services/socket';
 
 
 function Main({ navigation }) {
@@ -35,6 +36,16 @@ function Main({ navigation }) {
     loadInitialPosition();
   }, []);
 
+  function setupWebsocket() {
+    const { latitude, longitude } = currentRegion;
+
+    connetc(
+      latitude,
+      longitude,
+      techs
+    );
+  }
+
   async function loadDevs(){
     const { latitude, longitude } = currentRegion;
 
@@ -47,6 +58,7 @@ function Main({ navigation }) {
     });
 
     setDevs(response.data.devs);
+    setupWebsocket();
   }
 
   function handleRegionChange(region) {
